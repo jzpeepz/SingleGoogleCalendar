@@ -6,13 +6,13 @@ include 'lib/SingleGoogleCalendar.php';
 // 2. Choose "Installed Application" and "Other"
 // 3. Pass the Client ID, Client Secret and Redirect URI
 
-$cal = new SingleGoogleCalendar([
+$cal = new SingleGoogleCalendar(array(
     'clientID' => '',
     'clientSecret' => '',
     'redirectURI' => '',
     'authCode' => '',
     'refreshToken' => '',
-]);
+));
 
 $cal->setCalendarID('your-email@gmail.com'); // this is probably your email but it could be different
 
