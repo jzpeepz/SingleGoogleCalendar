@@ -26,7 +26,7 @@ $cal = new SingleGoogleCalendar([
     'clientID' => 'myCrazyClientId',
     'clientSecret' => 'myCrazyClientSecret',
     'redirectURI' => 'myCrazyRedirectUrl',
-    'authCode' => 'myCrazyAuthCode'
+    'authCode' => 'myCrazyAuthCode' // this is where you put the auth code
 ]);
 ```
 
@@ -40,7 +40,7 @@ $cal = new SingleGoogleCalendar([
     'clientSecret' => 'myCrazyClientSecret',
     'redirectURI' => 'myCrazyRedirectUrl',
     'authCode' => 'myCrazyAuthCode',
-    'refreshToken' => 'myCrazyRefreshToken'
+    'refreshToken' => 'myCrazyRefreshToken' // this is where you put the refresh token
 ]);
 ```
 
@@ -53,6 +53,7 @@ $cal->setCalendarID('your-email@gmail.com'); // this is probably your email but 
 * Now you are ready to make API queries! You could do something like this:
 
 ```php
+// this takes raw API parameters
 $events = $cal->query(array(
     'singleEvents' => 'true',
     'orderBy' => 'startTime',
